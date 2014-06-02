@@ -26,8 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)nameTextfield:(id)sender {
 }
 - (IBAction)messageTextfield:(id)sender {
+
+- (IBAction)myButton:(id)sender {
 }
 @end

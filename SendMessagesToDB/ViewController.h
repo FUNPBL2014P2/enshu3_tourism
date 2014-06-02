@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
 - (IBAction)messageTextfield:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextfield;
 - (IBAction)nameTextfield:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextfield;
+
+
+- (IBAction)myButton:(id)sender;
+
 
 @end
