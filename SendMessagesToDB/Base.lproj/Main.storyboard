@@ -39,10 +39,20 @@
                                     <action selector="nameTextfield:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="6ZX-VN-VyG"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-gC-9gH">
+                                <rect key="frame" x="134" y="259" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messageTextfield:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="jUO-NV-nB5"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="messageTextfield" destination="DMs-gC-9gH" id="obw-sr-qgg"/>
                         <outlet property="nameTextfield" destination="pM1-JY-Xdd" id="iCf-uT-j8U"/>
                     </connections>
                 </viewController>

@@ -28,4 +28,6 @@
 
 - (IBAction)nameTextfield:(id)sender {
 }
+- (IBAction)messageTextfield:(id)sender {
+}
 @end
