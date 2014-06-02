@@ -30,7 +30,23 @@
 - (IBAction)nameTextfield:(id)sender {
 }
 - (IBAction)messageTextfield:(id)sender {
+}
 
 - (IBAction)myButton:(id)sender {
+    NSString *urlAsString = @"http://210.226.0.82/webdb/add.php";
+    NSString *name = self.nameTextfield.text;
+    NSString *message = self.messageTextfield.text;
+    urlAsString = [urlAsString stringByAppendingString:@"?title="];
+    urlAsString = [urlAsString stringByAppendingString:name];
+    urlAsString = [urlAsString stringByAppendingString:@"&message="];
+    urlAsString = [urlAsString stringByAppendingString:message];
+    
+    NSURL *url = [NSURL URLWithString:urlAsString];
+    
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    [urlRequest setTimeoutInterval:30.0f];
+    [urlRequest setHTTPMethod:@"GET"];
+    [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
+
 }
 @end
