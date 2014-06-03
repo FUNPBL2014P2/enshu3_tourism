@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+//<<<<<<< HEAD
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+//=======
+- (IBAction)myButton:(id)sender;
+//>>>>>>> origin
 
 @end
