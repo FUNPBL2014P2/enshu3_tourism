@@ -34,12 +34,14 @@
 
 - (IBAction)myButton:(id)sender {
     NSString *urlAsString = @"http://210.226.0.82/webdb/add.php";
-    NSString *name = self.nameTextfield.text;
-    NSString *message = self.messageTextfield.text;
+    NSString *namebefore = self.nameTextfield.text;
+    NSString *messagebefore = self.messageTextfield.text;
+    NSString *nameafter = [namebefore stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *messageafter = [messagebefore stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     urlAsString = [urlAsString stringByAppendingString:@"?title="];
-    urlAsString = [urlAsString stringByAppendingString:name];
+    urlAsString = [urlAsString stringByAppendingString:nameafter];
     urlAsString = [urlAsString stringByAppendingString:@"&message="];
-    urlAsString = [urlAsString stringByAppendingString:message];
+    urlAsString = [urlAsString stringByAppendingString:messageafter];
     
     NSURL *url = [NSURL URLWithString:urlAsString];
     
