@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 - (IBAction)myButton:(id)sender;
+
 
 @end
