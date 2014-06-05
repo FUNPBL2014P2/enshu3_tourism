@@ -10,9 +10,11 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+- (IBAction)messageTextfield:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *messageTextfield;
+- (IBAction)nameTextfield:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextfield;
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 - (IBAction)myButton:(id)sender;
 
 
